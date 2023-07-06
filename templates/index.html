@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Translation - Translate.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <div class="bg-image">
+      <div class="bg-text">
+          <div class="mx-auto text-center">
+              <h1 class="navbar-heading">Document Translation</h1>
+              <p class="navbar-subheading">Translate your Spanish documents to English with ease.</p>
+          </div>
+          <form action="/translate" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                  <label for="doc-type">Choose document type:</label>
+                  <select id="doc-type" class="form-select" name="doc-type" onchange="showInputFields()">
+                      <option value="text">Text</option>
+                      <option value="pdf">PDF</option>
+                  </select>
+              </div>
+              <div id="text-input" class="form-group" style="display: none;">
+                  <label for="text">Enter text:</label>
+                  <textarea id="text" class="form-control" name="text" placeholder="Enter your text here"></textarea>
+              </div>
+              <div id="pdf-input" class="form-group" style="display: none;">
+                  <label for="pdf">Upload PDF:</label>
+                  <input type="file" id="pdf" class="form-control" name="pdf">
+              </div>
+              <button class="btn btn-primary" type="submit">Translate</button>
+          </form>
+      </div>
+  </div>
+
+  
+  <script>
+    function showInputFields() {
+      var docType = document.getElementById("doc-type").value;
+      var textInput = document.getElementById("text-input");
+      var pdfInput = document.getElementById("pdf-input");
+  
+      if (docType === "text") {
+        textInput.style.display = "block";
+        pdfInput.style.display = "none";
+      } else if (docType === "pdf") {
+        textInput.style.display = "none";
+        pdfInput.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

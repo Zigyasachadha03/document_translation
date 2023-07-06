@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Viewer - Translate.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  {% if translated_text %}
+  <div class="bg-image">
+      <div class="bg-text">
+          <div class="mx-auto text-center">
+              <h1 class="navbar-heading">Text Viewer</h1>
+              <p class="navbar-subheading">View and translate your text with ease.</p>
+          </div>
+          <div class="translated-text">
+              <h3>Translated Text:</h3>
+              <textarea rows="10" class="form-control" readonly>{{ translated_text }}</textarea>
+              <button class="btn btn-primary mt-3" onclick="location.href='/goback'">Go Back</button>
+          </div>
+      </div>
+  </div>
+  {% else %}
+  <div class="bg-image">
+      <div class="bg-text">
+          <div class="mx-auto text-center">
+              <h1 class="navbar-heading">Text Viewer</h1>
+              <p class="navbar-subheading">View and translate your text with ease.</p>
+          </div>
+          <div class="alert alert-info" role="alert">
+            No translated text available.
+          </div>
+          <button class="btn btn-primary mt-3" onclick="location.href='/goback'">Go Back</button>
+      </div>
+  </div>
+  {% endif %}
+
+</body>
+</html>

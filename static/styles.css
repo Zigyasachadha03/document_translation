@@ -1,0 +1,93 @@
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  .navbar-container{
+    margin: 0 10px;
+    padding: 5px 30px;
+  }
+
+  .bg-image{
+    /* position: relative; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: 
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url('keyboard-translate-3.jpg');
+    height: 100%;
+  }
+  
+/*   
+  .bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(151, 144, 144, 0.5);
+  } */
+  
+  .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px 150px;
+    text-align: center; 
+    padding-bottom: 80px;
+  }
+
+  .navbar-heading{
+    font-size: 900;
+    font-weight: bolder;
+  }
+
+  .navbar-subheading{
+    font-size: small;
+    color: #E4DCCF;
+    padding-bottom: 120px;
+  }
+
+  h1 {
+    text-align: center;
+    padding-top: 30px;
+    
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size:medium;
+  }
+
+  .form-group input[type="file"] {
+    display: block;
+  }
+
+  .form-group textarea {
+    width: 100%;
+    height: 200px;
+  }
+
+  .form-group .btn {
+    display: block;
+    margin-top: 10px;
+  }
